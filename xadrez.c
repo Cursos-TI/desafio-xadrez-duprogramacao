@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+
 
 int main() {
     // Nível Novato - Movimentação das Peças
@@ -16,17 +14,43 @@ int main() {
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    
+    
+    int torre;
+    int bispo = 0;
+    int rainha = 1;
+    int opcao;
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Selecione a opção.\n");
+    printf("1. Torre\n");
+    printf("2. Bispo.\n");
+    printf("3. Rainha.\n");
+    scanf("%d", &opcao);
+    switch(opcao){
+        case 1: 
+            for (torre = 0; torre <= 8; torre++) {
+            printf("Torre movimentando para: Direita.\n"); }
+        break;
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+        case 2:
+            while(bispo <= 8 ){
+                printf("Movimentando para: Cima - Direita.\n");
+                bispo++;
+            }
+        break;
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+        case 3:
+            do{
+             if (rainha <= 8)
+                    printf("Rainha movimentando para: Esquerda - Cima\n");
+                    rainha++;
+            } while (rainha <= 8);
+        break;
+        default:
+        printf("Opção inválida.\n");
+        break;
+    }
+
 
     return 0;
 }
