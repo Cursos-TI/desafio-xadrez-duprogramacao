@@ -19,12 +19,14 @@ int main() {
     int torre;
     int bispo = 0;
     int rainha = 1;
+    int cavalo;
     int opcao;
 
     printf("Selecione a opção.\n");
     printf("1. Torre\n");
     printf("2. Bispo.\n");
     printf("3. Rainha.\n");
+    printf("4. Cavalo.\n");
     scanf("%d", &opcao);
     switch(opcao){
         case 1: 
@@ -46,6 +48,19 @@ int main() {
                     rainha++;
             } while (rainha <= 8);
         break;
+
+        case 4:
+            for (cavalo = 1; cavalo > 0; cavalo--){
+                for(int i = 1; i <= 2; i++)
+                {
+                 printf("Cavalo movimentando para: Cima.\n");   
+                }
+            printf("Cavalo movimentando para: Direita.\n");
+            }
+            break;
+            
+    
+
         default:
         printf("Opção inválida.\n");
         break;
