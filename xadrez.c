@@ -1,6 +1,8 @@
 #include <stdio.h>
-//bispo são 5 casas pra diagonal-cima, torre 5 casas pra direita, torre 8 casas, rainha 8 casas
-// pra esquerda
+
+
+//funções void para cada peça do xadrez
+
 void moverTorre (int casas){
 
     if (casas > 0){
@@ -9,10 +11,13 @@ void moverTorre (int casas){
     }
 }
 void moverBispo (int casas3){
-    if (casas3 > 0){
-        printf("Cima - direita\n");
-        moverBispo (casas3 - 1);
+    for (int i = 0; i < 5; i++){
+        for (int j = 1; j > 0; j--){
+            printf("Movendo para: Direita\n");
+        }
+    printf("Movendo para: Cima.\n");
     }
+
 }
 
 void moverRainha (int casas2){
@@ -22,7 +27,7 @@ void moverRainha (int casas2){
         moverRainha (casas2 - 1);
     }
 }
-
+// menu com loop e leitura de case para mostrar cada opção
 int main() {
     int opcao;
     int cavalo;
